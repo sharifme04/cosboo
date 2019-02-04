@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-First you need be install `yarn` in your computer if that is not install. 
+First you need be install `yarn` in your computer if that is not installed. 
 
 Then you need to run `yarn install` for all node modules inside the project folder
 
