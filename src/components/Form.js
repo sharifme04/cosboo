@@ -38,7 +38,6 @@ class Form extends Component {
             label: '',
             done: ''
         });
-        this.props.getData();
         this.props.history.push('/');
     }
     
