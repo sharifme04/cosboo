@@ -3,8 +3,8 @@ import { Route } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 import Home from './components/Home';
-import Form from './components/Form';
-import UpdateForm from './components/UpdateForm';
+import NewAdd from './components/NewAdd';
+import Update from './components/Update';
 
 class App extends Component {
   constructor(props) {
@@ -41,10 +41,10 @@ class App extends Component {
             <Home {...this.state} {...props} deleteById={this.deleteById} />
            )}/>
          <Route path="/newuser" render={(props)=> (
-            <Form {...this.state} {...props} getData={this.getData}/>
+            <NewAdd {...this.state} {...props} getData={this.getData}/>
           )}/>
          <Route path="/edit/:_id" render={(props)=> (
-            <UpdateForm  {...props} getData={this.getData}/>
+            <Update  {...props} getData={this.getData}/>
         )}/>
       </div>
     );

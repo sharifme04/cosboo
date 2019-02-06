@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import Form from './Form';
 
-class UpdateForm extends Component {
+class Update extends Component {
     constructor(props) {
         super(props);
         this.state = {
             label: '', 
             done: '',
+            disabled:true,
+            submitButtonName:'Update',
+            submitButtonColor:'btn btn-info'
         };
     
         this.handleChangeUpdate = this.handleChangeUpdate.bind(this);
@@ -55,21 +59,16 @@ class UpdateForm extends Component {
     render() {
         return (
           <div>
-           <form onSubmit={this.handleUpdateSubmit}>
-           <div className="form-group">
-             <label >Label:</label>
-             <input type="label" value={this.state.label} onChange={this.handleChangeUpdate}  className="form-control"  name="label"/>
-           </div>
-           <div className="checkbox">
-             <label >
-              <input type="checkbox" checked={this.state.done}  name="done" disabled/>
-             </label>
-           </div>
-             <input type="submit" className="btn btn-primary" value="Update" />
-          </form>
+             <Form {...this.props} {...this.state}
+                handleChange = {this.handleChangeUpdate}
+                handleSubmit = {this.handleUpdateSubmit}
+                submitButtonName = {this.state.submitButtonName}
+                disabled = {this.state.disabled}
+                submitButtonColor = {this.state.submitButtonColor}  
+               />
          </div>
         )
     }
 }
 
-export default UpdateForm;
+export default Update;
