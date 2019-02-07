@@ -61,10 +61,7 @@ class Update extends Component {
           <div>
              <Form {...this.props} {...this.state}
                 handleChange = {this.handleChangeUpdate}
-                handleSubmit = {this.handleUpdateSubmit}
-                submitButtonName = {this.state.submitButtonName}
-                disabled = {this.state.disabled}
-                submitButtonColor = {this.state.submitButtonColor}  
+                handleSubmit = {this.handleUpdateSubmit} 
                />
          </div>
         )

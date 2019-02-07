@@ -51,9 +51,6 @@ class NewAdd extends Component {
                <Form {...this.props} {...this.state}
                 handleChange = {this.handleChange}
                 handleSubmit = {this.handleSubmit}
-                submitButtonName = {this.state.submitButtonName}
-                disabled = {this.state.disabled}
-                submitButtonColor = {this.state.submitButtonColor} 
                />
             </div>
         )

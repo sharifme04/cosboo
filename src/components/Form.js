@@ -14,7 +14,7 @@ const Form = (props) => {
               </label>
             </div>
               <input type="submit" className={props.submitButtonColor} value={props.submitButtonName} />
-            </form>
+         </form>
     </div>
   )
 }
