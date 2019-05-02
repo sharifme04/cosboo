@@ -13,8 +13,8 @@ class App extends Component {
        data:[]
     }
 
-    this.deleteById = this.deleteById.bind(this); 
-    this.getData = this.getData.bind(this); 
+    this.deleteById = this.deleteById.bind(this);
+    this.getData = this.getData.bind(this);
   }
   getData(){
     axios.get('https://fe-dev-argo.cosboo.com/api/dataEntries/query?type=Task', { headers: {'X-Requested-With': 'XMLHttpRequest'} })
@@ -35,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Cosboo Crud App</h1>
+        <h1>Sharif Crud App</h1>
          <hr/>
          <Route exact path="/" render={(props)=> (
             <Home {...this.state} {...props} deleteById={this.deleteById} />
